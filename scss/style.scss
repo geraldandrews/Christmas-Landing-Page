@@ -160,12 +160,16 @@ $grad: ();
 /* Merry Christmas Text Animation */
 .container {
     display: flex;
-    flex-direction: column;
     height: 50vh;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
+.container img {
+    width: 10%;
+    margin-left: 50px;
+}
+
 .text {
     font-family: 'Charm', cursive;
     margin: 0;
@@ -191,6 +195,18 @@ $grad: ();
     }
 } 
 
+@media (max-width: 1024px) {
+    .container {
+        height: 40vh;
+        flex-direction: column;
+    }
+
+    .container img {
+        width: 15%;
+        margin: 25px 0;
+    }
+}
+
 @media (max-width: 768px) {
     .text {
         font-size: 5rem;
@@ -198,6 +214,14 @@ $grad: ();
 }
 
 @media (max-width: 600px) {
+    .container {
+        height: 45vh;
+    }
+
+    .container img {
+        display: none;
+    }
+
     .text {
         font-size: 4rem;
     }
